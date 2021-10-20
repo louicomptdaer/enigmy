@@ -5,8 +5,8 @@ const addHidden = () => {
 }
 document.querySelector("#searchText").addEventListener("change", addHidden);
 
-let spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('<here_your_access_token>');
+const spotifyApi = new SpotifyWebApi();
+spotifyApi.setAccessToken('BQDFXGNjAI8DeyK-ofCZFbvHdmjTM1WxRv-hbrVXhjWAg62k5CHtBhzzt9m9UbaMU-svpPzagVyV59ll3dGKEAonwWFkkAMewJ76yKFiXlisUpQlfvqjlTlgkxVgxVEEVQn52hHAcdumgRAfoaf9C9Gb2Gf6-1wzwMENin3tAczz');
 
 spotifyApi.getArtistAlbums(
     '43ZHCT0cAZBISjO8DG9PnE',
