@@ -42,5 +42,47 @@ nav{
     flex-direction: column;
     align-items: center;
     width: 75%;
-    background-color: yellow;
+    background-color: #85E292;
+}
+
+/* //////////////////////////////////Louis/////////////////////////////////////// */
+
+#search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: black;
+    font-family: "Fira Sans", Arial, sans-serif;
+    padding-bottom: 20px;
+    border-bottom: solid 1px black;
+    width: 100%;
+}
+#searchText{
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #1ED760;
+    color: white;
+    padding: 5px;
+}
+input::placeholder{
+    color: #DFFFD6;
+}
+
+#imgRap{
+    width: 75%;
+    margin-top: -20px;
+}
+
+#startInt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", Arial, sans-serif;
+}
+
+.hidden{
+    display: none;
 }
