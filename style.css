@@ -1,7 +1,10 @@
 html, body{
     margin: 0;	
+    background-color: #0F7031;
 }
 header{
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(30,215,96,1) 85%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,6 +34,9 @@ nav{
     align-items: center;
     width: 25%;
     background-color: red;
+    font-size: 30px;
+    color: white;
+    font-family: "Fira Sans", Arial, sans-serif;
     border-radius: 20px;
     height: 400px;
     position: sticky;
@@ -65,6 +71,7 @@ nav{
     background-color: #1ED760;
     color: white;
     padding: 5px;
+    border: solid 2px black;
 }
 input::placeholder{
     color: #DFFFD6;
@@ -72,7 +79,6 @@ input::placeholder{
 
 #imgRap{
     width: 75%;
-    margin-top: -20px;
 }
 
 #startInt{
@@ -85,4 +91,8 @@ input::placeholder{
 
 .hidden{
     display: none;
+}
+
+.infos{
+    font-size: 50px;
 }
