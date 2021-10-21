@@ -72,3 +72,33 @@ document.querySelector("#searchText").addEventListener("change", rechercheArtist
 document.querySelector("#homeimg").addEventListener("click", goHome);
 recherche.addEventListener("change", chercheArtiste);
 
+const micBtn = document.querySelector("button");
+const micIcon = micBtn.querySelector("i");
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
+
+if (SpeechRecognition) {
+
+    const recognition = new SpeechRecognition();
+    let mic = "false"
+    micBtn.addEventListener("click", micBtnClick = () => {
+        if (mic == "false") {
+            recognition.start();
+            mic = "true";
+        } else {
+            recognition.stop();
+            mic = "false";
+        }
+    });
+
+    recognition.addEventListener("result", resultOfSpeechRecognition = (event) => {
+        mic = "false";
+        const transcript = event.results[0][0].transcript;
+        recherche.value = transcript + " ";
+        rechercheArtiste();
+        chercheArtiste();
+
+    })
+} else {
+    console.error("marche pas")
+}
+
