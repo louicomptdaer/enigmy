@@ -22,7 +22,7 @@ const goHome = () => {
 }
 
 const spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQA_0NPdfL0djtLs_klGsRqHYVcwXtEo25uzWzZHFZv6S3hFALvI7hi313R3rCw_uyi3LDfcX-NJFnm5bkwnkIKJcUqa5rlt8Niu04gnhFpoN_FdVIoV05hkgw8ebG1ih-en82oYjUSwe6YbrViy2wtbs5eCggG2v_ZemwmNyUCc');
+spotifyApi.setAccessToken('BQCSAeZMTvIpYdAw50jEoNZPe0wy3m2xNZGIEBMoGwoDKH5XGPPkIAjGT2r9Da3LtX-Dl50opyd9Wc-0hgnTc4JPp55cq7SHWsfa8WzU0Sismisl5eZOAcODRzbZYuBITSy7xlqbH4N4CJOF1H6u5dQ0y1ZbXNddqASCUU0ueqwN');
 
 const getArtistAlbums = (id) => {
 
