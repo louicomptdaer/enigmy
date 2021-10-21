@@ -24,8 +24,7 @@ const goHome = () => {
 
 
 const spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQBe8xDByoAQB_sQO4Bl4QQsAsfp6caoLFNpFj9_KjR0z65XlIHkk-_SbnBAPWvwYLEEYhgr9h8UZWqgxt8IkYs1Qiir7BL71YIownJkLsxoRQqUY6gAnVTvTipgaplTgjvRYXp0jq-hEh2w6cqHWdfq3S2gtmYqYizuweBAL8ew');
-
+spotifyApi.setAccessToken('BQBPh4RQBsMAb4k1MnW5wyqRM2tpO9ZSRUJGlgSb206eATZFFSPThhG4sxOFcEGLlR65mZOezi4Ep6-_1ZoW1Tso2ieAIgNTTIzmkirBKo1YjqkEpdSze6wAztvieDLskA-5g2OKPEBVzl-h4C_a0stDCZVXSbOvZS9q_ZDDcStV');
 
 
 const getArtistAlbums=(id)=>{
