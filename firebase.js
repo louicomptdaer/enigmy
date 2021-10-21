@@ -22,16 +22,29 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-
-db.collection("Fav").add({
-    id: "test",
-    name: "Fryday",
-    singer: "Booba"
-})
-    .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+/*addSong = () => {
+    db.collection("Fav").add({
+        id: "3twWGNAbmlzitnkgtivCKu",
+        name: "la lune attire la mer",
+        singer: "Apha Wann"
+    })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        });
+}*/
+db.collection("Fav")
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+        });
     })
     .catch((error) => {
-        console.error("Error adding document: ", error);
+        console.log("Error getting documents: ", error);
     });
+
+
 
