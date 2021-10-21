@@ -96,3 +96,24 @@ input::placeholder{
 .infos{
     font-size: 50px;
 }
+
+#infosRap{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.line_rapeur{
+    color: black;
+    cursor: pointer;
+    border-bottom: solid 1px black;
+    margin-bottom: 20px;
+}
+
+.line_album{
+    font-family: cursive;
+    font-style: italic;
+    margin: 10px;
+    font-size: 30px;;
+}
