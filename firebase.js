@@ -35,15 +35,21 @@ const db = firebase.firestore();
             console.error("Error adding document: ", error);
         });
 }*/
+let navRap = document.querySelector(".navRap");
 db.collection("Fav")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data());
+
+            let ajoutLigneBDD = document.createElement('div');
+            ajoutLigneBDD.textContent = doc.data().name + " - " + doc.data().singer;
+            //ajoutLigne.setAttribute('href',getArtistAlbums(element.id));
+            ajoutLigneBDD.classList.add('line_bdd');
+            navRap.append(ajoutLigneBDD);
         });
     })
     .catch((error) => {
-        console.log("Error getting documents: ", error);
+        console.error("Error getting documents: ", error);
     });
 
 

@@ -21,25 +21,20 @@ const goHome = () => {
     parentRap.innerHTML = "";
 }
 
-
-
 const spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken('BQA_0NPdfL0djtLs_klGsRqHYVcwXtEo25uzWzZHFZv6S3hFALvI7hi313R3rCw_uyi3LDfcX-NJFnm5bkwnkIKJcUqa5rlt8Niu04gnhFpoN_FdVIoV05hkgw8ebG1ih-en82oYjUSwe6YbrViy2wtbs5eCggG2v_ZemwmNyUCc');
-
+spotifyApi.setAccessToken('BQA09ww0o4hGQ1p1twdtqwun-sOf6D9vuhBdExGJJbApRGDe_A8BxB7Khd7wX9sfVperU0B9qVEfT55sf7Lmks8nHdPOKhXaiuMj57lT7wNc4L4VczvbQvp6GVDuFzNkGIugFOqXJVxMMnhUp270gOtD_aMcN2H1easS13g1fUxe');
 
 const getArtistAlbums = (id) => {
 
-    console.log(id)
     spotifyApi.getArtistAlbums(
         id,
         function (err, data) {
-            console.log(data);
+
             parentRap.innerHTML = "";
             data.items.forEach(function (element) {
-                console.log(element.name)
+
                 let ajoutLigne = document.createElement('div');
                 ajoutLigne.textContent = element.name;
-                //ajoutLigne.setAttribute('href',getArtistAlbums(element.id));
                 ajoutLigne.classList.add('line_album');
                 parentRap.append(ajoutLigne);
 
@@ -51,19 +46,17 @@ const getArtistAlbums = (id) => {
     );
 }
 
-
 let recherche = document.querySelector("#searchText");
 const chercheArtiste = () => {
     spotifyApi.searchArtists(recherche.value).then(
         function (data) {
-            console.log(data);
+
             parentRap.innerHTML = "";
             data.artists.items.forEach(function (element) {
-                console.log(element.name)
+
                 let ajoutLigne = document.createElement('div');
                 ajoutLigne.textContent = element.name;
                 ajoutLigne.addEventListener("click", () => getArtistAlbums(element.id))
-                //ajoutLigne.setAttribute('href',getArtistAlbums(element.id));
                 ajoutLigne.classList.add('line_rapeur');
                 parentRap.append(ajoutLigne);
 
@@ -84,7 +77,6 @@ const micIcon = micBtn.querySelector("i");
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 
 if (SpeechRecognition) {
-    console.log("marche")
 
     const recognition = new SpeechRecognition();
     let mic = "false"
@@ -98,12 +90,6 @@ if (SpeechRecognition) {
         }
     });
 
-    /*recognition.addEventListener("start", startSpeechRecognition = (event) => {
-        console.log(event)
-    })
-    recognition.addEventListener("end", endSpeechRecognition = (event) => {
-        console.log(event)
-    })*/
     recognition.addEventListener("result", resultOfSpeechRecognition = (event) => {
         mic = "false";
         const transcript = event.results[0][0].transcript;
@@ -113,6 +99,6 @@ if (SpeechRecognition) {
 
     })
 } else {
-    console.log("marche pas")
+    console.error("marche pas")
 }
 
